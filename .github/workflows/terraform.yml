@@ -1,0 +1,25 @@
+name: Terraform
+
+on:
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set environment variables
+        run: awk '{print "TERRAFORM_VERSION="$0}' .terraform-version >> $GITHUB_ENV
+
+      - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+
+      - name: terraform fmt
+        run: terraform fmt -recursive -check
+        continue-on-error: true
+
+      - name: tflint
+        run: docker run --rm -v $(pwd):/data -t wata727/tflint --enable-rule=terraform_unused_declarations
