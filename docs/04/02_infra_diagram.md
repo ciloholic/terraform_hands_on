@@ -9,4 +9,4 @@
 - NAT Gateway * 2 (AZ)
 - Elastic IP * 2 (AZ)
 
-![インフラ構成図](02_infra_diagram.jpg)
+![インフラ構成図](assets/02_infra_diagram.jpg)
