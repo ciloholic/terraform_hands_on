@@ -1,5 +1,6 @@
 !.keep
+.idea
 .terraform
 terraform.tfvars
 terraform.tfstate*
-.idea
+node_modules

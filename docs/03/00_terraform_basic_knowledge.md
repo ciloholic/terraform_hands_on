@@ -1,4 +1,4 @@
-# Terraform の基礎知識
+# Terraformの基礎知識
 
 1. [構成ファイル](/docs/03/01_configuration_file.md)
 1. [引数とブロック](/docs/03/02_resource_arguments.md)
