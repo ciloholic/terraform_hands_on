@@ -28,39 +28,39 @@
     textlint-rule-helper "2.0.1"
     textlint-tester "5.0.1"
 
-"@textlint/ast-node-types@^4.2.1", "@textlint/ast-node-types@^4.2.4", "@textlint/ast-node-types@^4.4.2":
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.4.2.tgz#d3fda5c9086baba04bc75440039ccf18415c8446"
-  integrity sha512-m5brKbI7UY/Q8sbIZ7z1KB8ls04nRILshz5fPQ4EZ04jL19qrrUHJR8A6nK3vJ/GelkDWl4I0VDYSAjLEFQV8g==
+"@textlint/ast-node-types@^4.2.1", "@textlint/ast-node-types@^4.2.4", "@textlint/ast-node-types@^4.4.2", "@textlint/ast-node-types@^4.4.3":
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.4.3.tgz#fdba16e8126cddc50f45433ce7f6c55e7829566c"
+  integrity sha512-qi2jjgO6Tn3KNPGnm6B7p6QTEPvY95NFsIAaJuwbulur8iJUEenp1OnoUfiDaC/g2WPPEFkcfXpmnu8XEMFo2A==
 
-"@textlint/ast-tester@^2.3.4":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@textlint/ast-tester/-/ast-tester-2.3.4.tgz#5134bd564f12d685201e61c8df476fa1321249c8"
-  integrity sha512-2gIsnJ1Dmr5jjF+u/vusNRqk2bJi0WwwbjP9WV/op51DhDTi7BUNjVSiZtcP9NVxidvs51XNEg+EMTRoKP3Msg==
+"@textlint/ast-tester@^2.3.5":
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-tester/-/ast-tester-2.3.5.tgz#897c5b09d84e67934ed1a81b488cd847072abb82"
+  integrity sha512-sbw0Edx22/Fa9fwObpus5KyhCnGKhyP1tU7flA7kwTi9EqQq2KFztz1c/QQWpgqymbdSPWg7HpAvGf4ru4FDZg==
   dependencies:
-    "@textlint/ast-node-types" "^4.4.2"
+    "@textlint/ast-node-types" "^4.4.3"
 
-"@textlint/ast-traverse@^2.3.4":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@textlint/ast-traverse/-/ast-traverse-2.3.4.tgz#b02f531ab3a02756eed35d26515e7450da31c713"
-  integrity sha512-NcjPXCvP8r4D2/azeQhwjPvh2+099I9RRBUrg6IpMfTW4IUUJb4BwZOPgjW+XRIVc71Dhgm82VSIagDL90FYcg==
+"@textlint/ast-traverse@^2.3.5":
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-traverse/-/ast-traverse-2.3.5.tgz#b232b369b245a446abd511ddb0a64bcdc2f88949"
+  integrity sha512-yo1gIoXDx2bNs1JjC9viRxJpErNsfPtzb585KcVwWxxWmu3tXlT2iz13iKdjj5FMYPJe/PORe7lYqymkSUZ7kg==
   dependencies:
-    "@textlint/ast-node-types" "^4.4.2"
+    "@textlint/ast-node-types" "^4.4.3"
 
-"@textlint/feature-flag@^3.0.5", "@textlint/feature-flag@^3.3.4":
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/@textlint/feature-flag/-/feature-flag-3.3.4.tgz#bae533899de864b9f43659473990f27eeec1c9e3"
-  integrity sha512-ULAqdD2y1sPAhbkaMjS2fltrZYCNQGsNDv/NQWFsCmDpQ1R8kxoUaTiXpebTM+nVuyvU5GfdkxhHyMarPIjmYw==
+"@textlint/feature-flag@^3.0.5", "@textlint/feature-flag@^3.3.5":
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/@textlint/feature-flag/-/feature-flag-3.3.5.tgz#81d9c073d4f836377211c68d2194451a63730258"
+  integrity sha512-S4JhbDQGu1Sutnvqs96nwxqwaErHrL49/QQDR8i/YNsINlurfKJbmktotb+w+qzeSibDibKzB8feOMVBXmO9Ww==
   dependencies:
     map-like "^2.0.0"
 
-"@textlint/fixer-formatter@^3.3.4":
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/@textlint/fixer-formatter/-/fixer-formatter-3.3.4.tgz#f8784544a278704df6d7a9859fe846f1856e4a0b"
-  integrity sha512-H4i+N+uN7EiI5vRnfRIccFc5yekNHnO8795fiOK2TZPb6SzY3iwLOGZ2rDKvgu7ZKdyGW945w3T0elUF3Fkr5A==
+"@textlint/fixer-formatter@^3.3.5":
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/@textlint/fixer-formatter/-/fixer-formatter-3.3.5.tgz#b831d9ad0fff326865265924acf8fe724fcf8321"
+  integrity sha512-FHfOQLvJV88vgAI9wwbAjtffo4ZtAW0bV8xkC3dY2DdVyo+7Tnhz0l2XPw2VFmyzpeHx9Slqw8nEv46YEs4JaQ==
   dependencies:
-    "@textlint/module-interop" "^1.2.4"
-    "@textlint/types" "^1.5.4"
+    "@textlint/module-interop" "^1.2.5"
+    "@textlint/types" "^1.5.5"
     chalk "^1.1.3"
     debug "^4.3.1"
     diff "^4.0.2"
@@ -70,32 +70,32 @@
     text-table "^0.2.0"
     try-resolve "^1.0.1"
 
-"@textlint/kernel@^3.0.0", "@textlint/kernel@^3.4.4":
-  version "3.4.4"
-  resolved "https://registry.yarnpkg.com/@textlint/kernel/-/kernel-3.4.4.tgz#2f321fdae5bad9f6626c76caa20fc960cbcd01fd"
-  integrity sha512-ro9TPnE16C6gtKkY3aOjTs8ZfzAxdXLCV9JD4BuV5P+xBiiu9NdiE2Hwm3LyEGQjMxaKnXjbm/DTCAxA4gz0Dg==
+"@textlint/kernel@^3.0.0", "@textlint/kernel@^3.4.5":
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/@textlint/kernel/-/kernel-3.4.5.tgz#96b7db302e3fbb43e676fc8baae262388242922c"
+  integrity sha512-KGeOq4mbjPe3okDtPw7mbnTX/wP66ndmRKAoOz8gOKDIDRlH8nOG/av6k6xbVhdMk9+ZnomqU8jSSYwTZHzAnA==
   dependencies:
-    "@textlint/ast-node-types" "^4.4.2"
-    "@textlint/ast-tester" "^2.3.4"
-    "@textlint/ast-traverse" "^2.3.4"
-    "@textlint/feature-flag" "^3.3.4"
-    "@textlint/source-code-fixer" "^3.4.4"
-    "@textlint/types" "^1.5.4"
-    "@textlint/utils" "^1.2.4"
+    "@textlint/ast-node-types" "^4.4.3"
+    "@textlint/ast-tester" "^2.3.5"
+    "@textlint/ast-traverse" "^2.3.5"
+    "@textlint/feature-flag" "^3.3.5"
+    "@textlint/source-code-fixer" "^3.4.5"
+    "@textlint/types" "^1.5.5"
+    "@textlint/utils" "^1.2.5"
     debug "^4.3.1"
     deep-equal "^1.1.1"
     map-like "^2.0.0"
     structured-source "^3.0.2"
 
-"@textlint/linter-formatter@^3.3.4":
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/@textlint/linter-formatter/-/linter-formatter-3.3.4.tgz#99f67fad75d38555a0f87c33529b64741a6f4a62"
-  integrity sha512-k1lyvR+w7ctwr5dWhMVRTKk19GH99BAO2dLk8ZS0ZcYyKqKAKu6Iyb1cWEg/u3dT3KFbWwoegnAelfz5828SHQ==
+"@textlint/linter-formatter@^3.3.5":
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/@textlint/linter-formatter/-/linter-formatter-3.3.5.tgz#51f9cc592acef8b776e182b034379d4dd33854a7"
+  integrity sha512-ujQwgGGK4nVYRuNeW8zDyxax2Z8FTRips5f3VBhWpJaR7hlqdh1iNahul8iJ+1JbfXiHm+51a01myoqGGh1ENA==
   dependencies:
     "@azu/format-text" "^1.0.1"
     "@azu/style-format" "^1.0.0"
-    "@textlint/module-interop" "^1.2.4"
-    "@textlint/types" "^1.5.4"
+    "@textlint/module-interop" "^1.2.5"
+    "@textlint/types" "^1.5.5"
     chalk "^1.1.3"
     concat-stream "^1.6.2"
     debug "^4.3.1"
@@ -110,12 +110,12 @@
     try-resolve "^1.0.1"
     xml-escape "^1.1.0"
 
-"@textlint/markdown-to-ast@^6.3.4":
-  version "6.3.4"
-  resolved "https://registry.yarnpkg.com/@textlint/markdown-to-ast/-/markdown-to-ast-6.3.4.tgz#392c14d1f8b0643ada220d99fc0ee9f1e375fa27"
-  integrity sha512-LLScbDRXov1l4U4OCLJ5clu9eWNonBG+rhuArwYAHpf0hwIoNoETfAQvrNtXZG/NZ96fdWv4PLtaN6dA4ldRdQ==
+"@textlint/markdown-to-ast@^6.3.5":
+  version "6.3.5"
+  resolved "https://registry.yarnpkg.com/@textlint/markdown-to-ast/-/markdown-to-ast-6.3.5.tgz#13d7c80e02e20e3a59c4ebeb8a4da6c35981542b"
+  integrity sha512-DjVEy61klC8OjQYP+iIukI95pjCM58jhpE046apqGWLo6JQSatfscJlcxmbRivfTQSVsa00RF2ciUFBmw3bobg==
   dependencies:
-    "@textlint/ast-node-types" "^4.4.2"
+    "@textlint/ast-node-types" "^4.4.3"
     debug "^4.3.1"
     remark-frontmatter "^1.3.3"
     remark-parse "^5.0.0"
@@ -123,10 +123,10 @@
     traverse "^0.6.6"
     unified "^6.2.0"
 
-"@textlint/module-interop@^1.2.2", "@textlint/module-interop@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@textlint/module-interop/-/module-interop-1.2.4.tgz#176ecec3fd09c2860dd155c599fdc4087ff85f47"
-  integrity sha512-/wUKvDbBEujrhpcuD7Et4Mcicm3SG2oAe/tyMruLxSJ86umGxd34dEcHRON8fJzou9qyt0gFoczcypd4k3hJow==
+"@textlint/module-interop@^1.2.2", "@textlint/module-interop@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@textlint/module-interop/-/module-interop-1.2.5.tgz#f10582e66e0633ac1aea228f30c5b3f5d8463f45"
+  integrity sha512-+yEluCSbj6oxk9ENFojVcSxURvXOg7AU3vBiVHPjPEShaqbzZZ6tcut6gbDcIYhEDUkegZGmGwyfOe+wNABhKw==
 
 "@textlint/regexp-string-matcher@^1.1.0":
   version "1.1.0"
@@ -140,46 +140,46 @@
     lodash.uniqwith "^4.5.0"
     to-regex "^3.0.2"
 
-"@textlint/source-code-fixer@^3.4.4":
-  version "3.4.4"
-  resolved "https://registry.yarnpkg.com/@textlint/source-code-fixer/-/source-code-fixer-3.4.4.tgz#c15622cbc796722a04044a35edc33b38f2b6adb9"
-  integrity sha512-GDHVin2EJ9PGJ33VMGlqtPcvUlY+pkTbaWs4jWv8oBaEK8UUBzS5ZpEc4xi7Xp5vIXnVsCSLKNC6bgvR9X/AoQ==
+"@textlint/source-code-fixer@^3.4.5":
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/@textlint/source-code-fixer/-/source-code-fixer-3.4.5.tgz#d6952b78fb541e475f6b3e22e24c6b7afefdfdce"
+  integrity sha512-YUcBg6zs7H5ycLwWdfv5LHWlBx7iBAQL6vHY2uPw8AMPYgzU6/f91NGBU/QR7/FVw0e7v9zMngcRN1hMOxpFCw==
   dependencies:
-    "@textlint/types" "^1.5.4"
+    "@textlint/types" "^1.5.5"
     debug "^4.3.1"
 
-"@textlint/text-to-ast@^3.3.4":
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/@textlint/text-to-ast/-/text-to-ast-3.3.4.tgz#b1156e8a1cc23e5642139a200fe5074fbeed9434"
-  integrity sha512-oDwGNQCAo7ROnHqaksPEogf8fxXGU3Z61C6NEv0n9vEWEkUX9oUVX4c9kh5UieZL5nN/xIdzVc3TrXywkkOK3g==
+"@textlint/text-to-ast@^3.3.5":
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/@textlint/text-to-ast/-/text-to-ast-3.3.5.tgz#86232c0adf4038fc87040daddcfbd614bca15bdc"
+  integrity sha512-+1+Kj7wuQHgc43RowVN/KWz3/aevk2RHARX8/p9Y+pE25HRJ36KZo1PLSYYx82NnWpvZTXB3QONWiAukdv6jBg==
   dependencies:
-    "@textlint/ast-node-types" "^4.4.2"
+    "@textlint/ast-node-types" "^4.4.3"
 
-"@textlint/textlint-plugin-markdown@^5.3.4":
-  version "5.3.4"
-  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-markdown/-/textlint-plugin-markdown-5.3.4.tgz#b3248bcf69ca6b92c923fae4c4d57a6f6ba1f9d9"
-  integrity sha512-g8KKuwhzzlRjvKrpq3SbGc+JJMAJoy5Xp0Ibvq7QKgNVxwN/f5WtmrJc8CdgFG7++jgtkDPlofz0c9xG63xKwQ==
+"@textlint/textlint-plugin-markdown@^5.3.5":
+  version "5.3.5"
+  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-markdown/-/textlint-plugin-markdown-5.3.5.tgz#dc54e5a07bb8a4600e22e84f162bd6afc1442e54"
+  integrity sha512-x1/DJa+6wsR4LwkL+JA5OdEoZ/PhxtkKb20IqHTsLwQIeDL4aNWT6GrAk0HKTOomzsyNrUBuvzYiCy/f75LtBw==
   dependencies:
-    "@textlint/markdown-to-ast" "^6.3.4"
+    "@textlint/markdown-to-ast" "^6.3.5"
 
-"@textlint/textlint-plugin-text@^4.3.4":
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-text/-/textlint-plugin-text-4.3.4.tgz#7e91f358318f945b7a0bd1b6d75edffff55aafcc"
-  integrity sha512-ZtctKFR8V9mIZAMibS97xPWlt2lViizIRAy4oDaKCnxAwJ0uAjxm/OlHHdaFwNydGaEDtN60mcmarDqOOAZIiA==
+"@textlint/textlint-plugin-text@^4.3.5":
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-text/-/textlint-plugin-text-4.3.5.tgz#092f53208c0db3d07077007b21af0812b9236170"
+  integrity sha512-ygjzswWrzlCiNNCy1+WF0oI8tNCk+1fS/nJEtG7DHuTVvE0OTn4MdWJXOD8sd+ZffXr+uFmEqMisHo06+RpQCg==
   dependencies:
-    "@textlint/text-to-ast" "^3.3.4"
+    "@textlint/text-to-ast" "^3.3.5"
 
-"@textlint/types@^1.1.2", "@textlint/types@^1.5.4":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@textlint/types/-/types-1.5.4.tgz#4ebd6b052bb329810949516412ad2b285b04dc02"
-  integrity sha512-bhSrOjW8AFSa/xf6lYZ2akE0j+4O/WEAA2S/R8RrjNMkA5Az2j57mxPNpqMhEeyHDkpzN/coIlqUwgYvcJHv1A==
+"@textlint/types@^1.1.2", "@textlint/types@^1.5.5":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@textlint/types/-/types-1.5.5.tgz#9c82dbcbf4e00116573f05c6739c6c8ec3b35304"
+  integrity sha512-80P6fcqgsG9bP6JgR6W/E/oIx+71pplaicYCvvB4vMIeGk0OnWls4Q21kCpDYmq/C/ABtZ/Gy/Ov/8ExQPeQ7A==
   dependencies:
-    "@textlint/ast-node-types" "^4.4.2"
+    "@textlint/ast-node-types" "^4.4.3"
 
-"@textlint/utils@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@textlint/utils/-/utils-1.2.4.tgz#208a052e55d0d717f6c55097866bf84f444c5b66"
-  integrity sha512-FREWc8n6bJFsKehtUlHPtbqnXULWhdnlazqWiHMjiBtcxUfD+1kY3P7PNGbChdzeZGmwBkgFQyGkok8bAGnZOw==
+"@textlint/utils@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@textlint/utils/-/utils-1.2.5.tgz#1406e179d44d130d8e60322f3f873a721c93ba75"
+  integrity sha512-2vgz4x3tKK+R9N0OlOovJClRCHubxZi86ki218cvRVpoU9pPrHwkwZud+rjItDl2xFBj7Gujww7c0W1wyytWVQ==
 
 "@types/structured-source@^3.0.0":
   version "3.0.0"
@@ -603,10 +603,10 @@ get-stdin@^5.0.1:
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
   integrity sha1-Ei4WFZHiH/TFJTAwVpPyDmOTo5g=
 
-glob@^7.1.3, glob@^7.1.6:
-  version "7.1.6"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
-  integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
+glob@^7.1.3, glob@^7.1.7:
+  version "7.1.7"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.7.tgz#3b193e9233f01d42d0b3f78294bbeeb418f94a90"
+  integrity sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
@@ -721,16 +721,16 @@ is-arrayish@^0.2.1:
   integrity sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0=
 
 is-bigint@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/is-bigint/-/is-bigint-1.0.1.tgz#6923051dfcbc764278540b9ce0e6b3213aa5ebc2"
-  integrity sha512-J0ELF4yHFxHy0cmSxZuheDOz2luOdVvqjwmEcj8H/L1JHeuEDSDbeRP+Dk9kFVk5RTFzbucJ2Kb9F7ixY2QaCg==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-bigint/-/is-bigint-1.0.2.tgz#ffb381442503235ad245ea89e45b3dbff040ee5a"
+  integrity sha512-0JV5+SOCQkIdzjBK9buARcV804Ddu7A0Qet6sHi3FimE9ne6m4BGQZfRn+NZiXbBk4F4XmHfDZIipLj9pX8dSA==
 
 is-boolean-object@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/is-boolean-object/-/is-boolean-object-1.1.0.tgz#e2aaad3a3a8fca34c28f6eee135b156ed2587ff0"
-  integrity sha512-a7Uprx8UtD+HWdyYwnD1+ExtTgqQtD2k/1yJgtXP6wnMm8byhkoTZRl+95LLThpzNZJ5aEvi46cdH+ayMFRwmA==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/is-boolean-object/-/is-boolean-object-1.1.1.tgz#3c0878f035cb821228d350d2e1e36719716a3de8"
+  integrity sha512-bXdQWkECBUIAcCkeH1unwJLIpZYaa5VvuygSyS/c2lf719mTKZDU5UdDRlpd01UjADgmW8RfqaP+mRaVPdr/Ng==
   dependencies:
-    call-bind "^1.0.0"
+    call-bind "^1.0.2"
 
 is-buffer@^1.1.4, is-buffer@~1.1.6:
   version "1.1.6"
@@ -748,9 +748,9 @@ is-callable@^1.1.4, is-callable@^1.2.3:
   integrity sha512-J1DcMe8UYTBSrKezuIUTUwjXsho29693unXM2YhJUTR2txK/eG47bvNa/wipPFmZFgr/N6f1GA66dv0mEyTIyQ==
 
 is-core-module@^2.2.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.3.0.tgz#d341652e3408bca69c4671b79a0954a3d349f887"
-  integrity sha512-xSphU2KG9867tsYdLD4RWQ1VqdFl4HTO9Thf3I/3dLEfr0dbPTWKsuCKrgqMljg4nPE+Gq0VCnzT3gr0CyBmsw==
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.4.0.tgz#8e9fc8e15027b011418026e98f0e6f4d86305cc1"
+  integrity sha512-6A2fkfq1rfeQZjxrZJGerpLCTHRNEBiSgnu0+obeJpEPZRUooHgsizvzv0ZjJwOz3iWIHdJtVWJ/tmPr3D21/A==
   dependencies:
     has "^1.0.3"
 
@@ -762,9 +762,9 @@ is-data-descriptor@^1.0.0:
     kind-of "^6.0.0"
 
 is-date-object@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/is-date-object/-/is-date-object-1.0.2.tgz#bda736f2cd8fd06d32844e7743bfa7494c3bfd7e"
-  integrity sha512-USlDT524woQ08aoZFzh3/Z6ch9Y/EWXEHQ/AaRN0SkKq4t2Jw2R2339tSXmwuVoY7LLlBCbOIlx2myP/L5zk0g==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/is-date-object/-/is-date-object-1.0.4.tgz#550cfcc03afada05eea3dd30981c7b09551f73e5"
+  integrity sha512-/b4ZVsG7Z5XVtIxs/h9W8nvfLgSAyKYdtGWQLbqy6jA1icmgjf8WCoTKgeS4wy5tYaPePouzFMANbnj94c2Z+A==
 
 is-decimal@^1.0.0:
   version "1.0.4"
@@ -815,9 +815,9 @@ is-negative-zero@^2.0.1:
   integrity sha512-2z6JzQvZRa9A2Y7xC6dQQm4FSTSTNWjKIYYTt4246eMTJmIo0Q+ZyOsU66X8lxK1AbB92dFeglPLrhwpeRKO6w==
 
 is-number-object@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/is-number-object/-/is-number-object-1.0.4.tgz#36ac95e741cf18b283fc1ddf5e83da798e3ec197"
-  integrity sha512-zohwelOAur+5uXtk8O3GPQ1eAcu4ZX3UwxQhUlfFFMNpUd83gXgjbhJh6HmB6LUNV/ieOLQuDwJO3dWJosUeMw==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/is-number-object/-/is-number-object-1.0.5.tgz#6edfaeed7950cff19afedce9fbfca9ee6dd289eb"
+  integrity sha512-RU0lI/n95pMoUKu9v1BZP5MBcZuNSVJkMkAG2dJqC4z2GlkGUNeH68SuHuBKBD/XFe+LHZ+f9BKkLET60Niedw==
 
 is-plain-obj@^1.1.0:
   version "1.1.0"
@@ -837,12 +837,12 @@ is-plain-object@^2.0.4:
     isobject "^3.0.1"
 
 is-regex@^1.0.4, is-regex@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.1.2.tgz#81c8ebde4db142f2cf1c53fc86d6a45788266251"
-  integrity sha512-axvdhb5pdhEVThqJzYXwMlVuZwC+FF2DpcOhTS+y/8jVq4trxyPgfcwIxIKiyeuLlSQYKkmUaPQJ8ZE4yNKXDg==
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.1.3.tgz#d029f9aff6448b93ebbe3f33dac71511fdcbef9f"
+  integrity sha512-qSVXFz28HM7y+IWX6vLCsexdlvzT1PJNFSBuaQLQ5o0IEw8UDYW6/2+eCMVyIsbM8CNLX2a/QWmSpyxYEHY7CQ==
   dependencies:
     call-bind "^1.0.2"
-    has-symbols "^1.0.1"
+    has-symbols "^1.0.2"
 
 is-regexp@^1.0.0:
   version "1.0.0"
@@ -850,9 +850,9 @@ is-regexp@^1.0.0:
   integrity sha1-/S2INUXEa6xaYz57mgnof6LLUGk=
 
 is-string@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/is-string/-/is-string-1.0.5.tgz#40493ed198ef3ff477b8c7f92f644ec82a5cd3a6"
-  integrity sha512-buY6VNRjhQMiF1qWDouloZlQbRhDPCebwxSjxMjxgemYT46YMd2NR0/H+fBhEfWX4A/w9TBJ+ol+okqJKFE6vQ==
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/is-string/-/is-string-1.0.6.tgz#3fe5d5992fb0d93404f32584d4b0179a71b54a5f"
+  integrity sha512-2gdzbKUuqtQ3lYNrUTQYoClPhm7oQu4UdpSZMp1/DGgkHBT8E2Z1l0yMdb6D4zNAxwDiMv8MdulKROJGNl0Q0w==
 
 is-supported-regexp-flag@^1.0.0:
   version "1.0.1"
@@ -860,11 +860,11 @@ is-supported-regexp-flag@^1.0.0:
   integrity sha512-3vcJecUUrpgCqc/ca0aWeNu64UGgxcvO60K/Fkr1N6RSvfGCTU60UKN68JDmKokgba0rFFJs12EnzOQa14ubKQ==
 
 is-symbol@^1.0.2, is-symbol@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.3.tgz#38e1014b9e6329be0de9d24a414fd7441ec61937"
-  integrity sha512-OwijhaRSgqvhm/0ZdAcXNZt9lYdKFpcRDT5ULUuYXPoT794UNOdU+gpT6Rzo7b4V2HUl/op6GqY894AZwv9faQ==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.4.tgz#a6dac93b635b063ca6872236de88910a57af139c"
+  integrity sha512-C/CPBqKWnvdcxqIARxyOh4v1UUEOCHpgDa0WYgpKDFMszcrPcffg5uhwSgPCLD2WWxmq6isisz87tzT01tuGhg==
   dependencies:
-    has-symbols "^1.0.1"
+    has-symbols "^1.0.2"
 
 is-utf8@^0.2.0:
   version "0.2.1"
@@ -1130,9 +1130,9 @@ object-assign@^4.0.1:
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
 object-inspect@^1.9.0:
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.10.2.tgz#b6385a3e2b7cae0b5eafcf90cddf85d128767f30"
-  integrity sha512-gz58rdPpadwztRrPjZE9DZLOABUpTGdcANUgOwBFO1C+HZZhePoP83M65WGDmbpwFYJSWqavbl4SgDn4k8RYTA==
+  version "1.10.3"
+  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.10.3.tgz#c2aa7d2d09f50c99375704f7a0adf24c5782d369"
+  integrity sha512-e5mCJlSH7poANfC8z8S9s9S2IN5/4Zb3aZ33f5s8YqoazCFzNLloLU8r5VCG+G7WoqLvAAZoVMcy3tp/3X0Plw==
 
 object-is@^1.0.1:
   version "1.1.5"
@@ -1806,9 +1806,9 @@ textlint-rule-ja-space-after-question@^2.0.2:
     textlint-rule-helper "^2.0.0"
 
 textlint-rule-ja-space-around-code@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-around-code/-/textlint-rule-ja-space-around-code-2.0.2.tgz#b107ce38048f2923820c9fe143f7d93477d56d32"
-  integrity sha512-ER4+dnu1ORusQT4bcF4Z4tB4wpDRNcL3a2lZlpug/4YG62L3WrISGUMUWpHaEXLu+QdqNq2hPo2O6L2r2PMmhA==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-around-code/-/textlint-rule-ja-space-around-code-2.1.1.tgz#0954ac71e25353d7ddede5514e77a4087f9c3562"
+  integrity sha512-PMmybBriyUQoa8yV2EH0m7vW+zHk2a2arng4LFEKyj3ikrBl22XIh9ptpxw1baM3rkwvnRKFLknLIXF1uIDfBA==
   dependencies:
     match-index "^1.0.1"
     textlint-rule-helper "^2.0.0"
@@ -1993,27 +1993,27 @@ textlint-util-to-string@^3.0.0, textlint-util-to-string@^3.1.1:
     structured-source "^3.0.2"
     unified "^8.4.0"
 
-textlint@^11.0.1, textlint@^11.9.0:
-  version "11.9.0"
-  resolved "https://registry.yarnpkg.com/textlint/-/textlint-11.9.0.tgz#508a8181a2ff8582613bcef5081424ecca5c822d"
-  integrity sha512-a9ZCfCOcOTNxEQsRbYBDFNu8m5cjJC+znnXCBommGSdP0W+9QmwZnkralwpxrVhRgWvLz+QyuDXtLBZcqfDmHg==
+textlint@^11.0.1, textlint@^11.9.1:
+  version "11.9.1"
+  resolved "https://registry.yarnpkg.com/textlint/-/textlint-11.9.1.tgz#13f31aa50a5121eb76adced69dcadc1e007d7c9a"
+  integrity sha512-7eC76od8ILhLl3O10h1rd0QxlVaQkR1nqTD7PrszrlGGe8mXS2VNaOXEiAm8PPUMQBdjB5n8/cpeZ+AbDJdNTw==
   dependencies:
-    "@textlint/ast-node-types" "^4.4.2"
-    "@textlint/ast-traverse" "^2.3.4"
-    "@textlint/feature-flag" "^3.3.4"
-    "@textlint/fixer-formatter" "^3.3.4"
-    "@textlint/kernel" "^3.4.4"
-    "@textlint/linter-formatter" "^3.3.4"
-    "@textlint/module-interop" "^1.2.4"
-    "@textlint/textlint-plugin-markdown" "^5.3.4"
-    "@textlint/textlint-plugin-text" "^4.3.4"
-    "@textlint/types" "^1.5.4"
-    "@textlint/utils" "^1.2.4"
+    "@textlint/ast-node-types" "^4.4.3"
+    "@textlint/ast-traverse" "^2.3.5"
+    "@textlint/feature-flag" "^3.3.5"
+    "@textlint/fixer-formatter" "^3.3.5"
+    "@textlint/kernel" "^3.4.5"
+    "@textlint/linter-formatter" "^3.3.5"
+    "@textlint/module-interop" "^1.2.5"
+    "@textlint/textlint-plugin-markdown" "^5.3.5"
+    "@textlint/textlint-plugin-text" "^4.3.5"
+    "@textlint/types" "^1.5.5"
+    "@textlint/utils" "^1.2.5"
     debug "^4.3.1"
     deep-equal "^1.1.1"
     file-entry-cache "^5.0.1"
     get-stdin "^5.0.1"
-    glob "^7.1.6"
+    glob "^7.1.7"
     is-file "^1.0.0"
     log-symbols "^1.0.2"
     map-like "^2.0.0"
