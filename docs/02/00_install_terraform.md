@@ -2,7 +2,9 @@
 
 ## tfenv の導入
 
-Terraformはまだ`v1`に到達しておらず頻繁に更新が入るため、`tfenv`でTerraformのバージョンを切り替えられるようにします。
+Terraformは、2021/6/8に`v1.0.0`に到達しました。
+
+頻繁にバージョンが上がるため、`tfenv`でTerraformのバージョンを切り替えられるようにします。
 
 すでに `homebrew`を導入している場合は`brew install tfenv`で導入ができます。
 
@@ -10,7 +12,7 @@ Terraformはまだ`v1`に到達しておらず頻繁に更新が入るため、`
 
 ```
 $ brew install tfenv
-$ echo "0.15.1" > .terraform-version
+$ echo "1.0.0" > .terraform-version
 $ tfenv install
 ```
 
@@ -18,6 +20,6 @@ $ tfenv install
 
 ```
 $ terraform -v
-Terraform v0.15.1
+Terraform v1.0.0
 on darwin_amd64
 ```
