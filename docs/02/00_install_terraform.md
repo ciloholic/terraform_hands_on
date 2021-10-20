@@ -12,7 +12,7 @@ Terraformは、2021/6/8に`v1.0.0`に到達しました。
 
 ```
 $ brew install tfenv
-$ echo "1.0.0" > .terraform-version
+$ echo "1.0.9" > .terraform-version
 $ tfenv install
 ```
 
@@ -20,6 +20,6 @@ $ tfenv install
 
 ```
 $ terraform -v
-Terraform v1.0.0
+Terraform v1.0.9
 on darwin_amd64
 ```

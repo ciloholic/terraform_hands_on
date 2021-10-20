@@ -16,7 +16,7 @@ aws_access_key = "アクセスキーを記入してください"
 aws_secret_key = "シークレットキーを記入してください"
 
 # service config
-service_name = "hands-on"
+service_name = "wordpress"
 env          = "dev"
 ```
 
