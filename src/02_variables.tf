@@ -46,4 +46,20 @@ locals {
       }
     }
   }
+  aurora_config = {
+    master_username         = var.aurora_master_username
+    family                  = "aurora-postgresql11"
+    engine                  = "aurora-postgresql"
+    engine_version          = var.aurora_engine_version
+    cluster_instance_count  = var.aurora_cluster_instance_count
+    instance_class          = var.aurora_instance_class
+    backup_retention_period = 0
+    ca_cert_identifier      = "rds-ca-2019"
+  }
+  fargate_config = {
+    deploy_groups            = ["blue", "green"]
+    wordpress_min_capacity   = 1
+    wordpress_max_capacity   = 1
+    wordpress_container_port = 80
+  }
 }
