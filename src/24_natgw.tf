@@ -7,10 +7,7 @@ resource "aws_nat_gateway" "natgw" {
   allocation_id = aws_eip.natgw[each.value].id
   subnet_id     = aws_subnet.public_subnet[each.value].id
 
-  tags = merge(
-    local.common_tags,
-    {
-      Name = "${local.service_config.prefix}-nat-gateway-${each.key}"
-    }
-  )
+  tags = {
+    Name = "${local.service_config.prefix}-nat-gateway-${each.key}"
+  }
 }

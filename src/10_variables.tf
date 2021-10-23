@@ -17,12 +17,6 @@ variable "env" {
 }
 
 locals {
-  # 共通タグ
-  common_tags = {
-    Project     = var.service_name
-    Environment = var.env
-    Management  = "Terraform"
-  }
   service_config = {
     name   = var.service_name
     env    = var.env

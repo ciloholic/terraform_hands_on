@@ -5,12 +5,9 @@ resource "aws_subnet" "public_subnet" {
   availability_zone = "${local.aws_config.region}${each.key}"
   cidr_block        = each.value
 
-  tags = merge(
-    local.common_tags,
-    {
-      Name = "${local.service_config.prefix}-public-subnet-${each.key}"
-    }
-  )
+  tags = {
+    Name = "${local.service_config.prefix}-public-subnet-${each.key}"
+  }
 }
 
 resource "aws_subnet" "private_subnet" {
@@ -20,10 +17,7 @@ resource "aws_subnet" "private_subnet" {
   availability_zone = "${local.aws_config.region}${each.key}"
   cidr_block        = each.value
 
-  tags = merge(
-    local.common_tags,
-    {
-      Name = "${local.service_config.prefix}-private-subnet-${each.key}"
-    }
-  )
+  tags = {
+    Name = "${local.service_config.prefix}-private-subnet-${each.key}"
+  }
 }

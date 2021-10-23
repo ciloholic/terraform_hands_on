@@ -2,24 +2,18 @@ resource "aws_route_table" "public_route_table" {
   for_each = toset(local.network_config.availability_zones)
   vpc_id   = aws_vpc.example.id
 
-  tags = merge(
-    local.common_tags,
-    {
-      Name = "${local.service_config.prefix}-public-route-table-${each.value}"
-    }
-  )
+  tags = {
+    Name = "${local.service_config.prefix}-public-route-table-${each.value}"
+  }
 }
 
 resource "aws_route_table" "private_route_table" {
   for_each = toset(local.network_config.availability_zones)
   vpc_id   = aws_vpc.example.id
 
-  tags = merge(
-    local.common_tags,
-    {
-      Name = "${local.service_config.prefix}-private-route-table-${each.value}"
-    }
-  )
+  tags = {
+    Name = "${local.service_config.prefix}-private-route-table-${each.value}"
+  }
 }
 
 resource "aws_route" "public_route" {

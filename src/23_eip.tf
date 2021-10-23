@@ -6,10 +6,7 @@ resource "aws_eip" "natgw" {
   for_each   = toset(local.network_config.availability_zones)
   vpc        = true
 
-  tags = merge(
-    local.common_tags,
-    {
-      Name = "${local.service_config.prefix}-eip-natgw-${each.value}"
-    }
-  )
+  tags = {
+    Name = "${local.service_config.prefix}-eip-natgw-${each.value}"
+  }
 }

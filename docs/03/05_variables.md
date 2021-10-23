@@ -49,10 +49,10 @@ locals {
 }
 
 locals {
-  # すべてのリソースに付与される共通タグ
-  common_tags = {
-    Service = local.service_name
-    Owner   = local.owner
+  network_config = {
+    vpc = {
+      cidr_block = "10.0.0.0/16"
+    }
   }
 }
 ```
