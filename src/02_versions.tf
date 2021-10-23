@@ -4,7 +4,7 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      # AWSプロバイダのバージョンは、ハンズオン作成時の最新としています
+      # AWS プロバイダのバージョンは、ハンズオン作成時の最新としています
       version = "3.63.0"
     }
   }

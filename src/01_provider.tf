@@ -1,4 +1,4 @@
-# 本ハンズオンでは、AWSのインフラ構築を行なうため、AWSプロバイダを利用しています
+# 本ハンズオンでは、AWS のインフラ構築を行なうため、AWS プロバイダを利用しています
 provider "aws" {
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
