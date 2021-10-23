@@ -21,3 +21,7 @@ val:
 fmt:
 	@cd src && \
 	terraform fmt -recursive
+
+tfupdate:
+	docker run -it --rm -v $$(pwd)/src:/root/src minamijoyo/tfupdate terraform -r /root/src
+	docker run -it --rm -v $$(pwd)/src:/root/src minamijoyo/tfupdate provider aws -r /root/src
