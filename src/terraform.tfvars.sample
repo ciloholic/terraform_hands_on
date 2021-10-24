@@ -5,3 +5,13 @@ aws_secret_key = ""
 # service config
 service_name = ""
 env          = ""
+
+# aurora config
+aurora_master_username        = ""
+aurora_engine_version         = ""
+aurora_instance_class         = ""
+aurora_cluster_instance_count = 
+
+# fargate config
+wordpress_fargate_min_capacity   = 
+wordpress_fargate_max_capacity   = 

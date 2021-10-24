@@ -1,3 +1,5 @@
+# 現在の AWS アカウント ID を取得
+data "aws_caller_identity" "current" {}
 # 現在のリージョン名を取得(ap-northeast-1)
 data "aws_region" "current" {}
 
@@ -15,6 +17,24 @@ variable "service_name" {
 variable "env" {
   type = string
 }
+variable "aurora_master_username" {
+  type = string
+}
+variable "aurora_engine_version" {
+  type = string
+}
+variable "aurora_cluster_instance_count" {
+  type = number
+}
+variable "aurora_instance_class" {
+  type = string
+}
+variable "wordpress_fargate_min_capacity" {
+  type = number
+}
+variable "wordpress_fargate_max_capacity" {
+  type = number
+}
 
 # Terraform 内で利用するローカル変数をまとめて定義
 locals {
@@ -24,7 +44,8 @@ locals {
     prefix = "${var.service_name}-${var.env}"
   }
   aws_config = {
-    region = data.aws_region.current.name
+    aws_account_id = data.aws_caller_identity.current.account_id
+    region         = data.aws_region.current.name
   }
   network_config = {
     vpc = {
@@ -47,19 +68,17 @@ locals {
     }
   }
   aurora_config = {
-    master_username         = var.aurora_master_username
-    family                  = "aurora-postgresql11"
-    engine                  = "aurora-postgresql"
-    engine_version          = var.aurora_engine_version
-    cluster_instance_count  = var.aurora_cluster_instance_count
-    instance_class          = var.aurora_instance_class
-    backup_retention_period = 0
-    ca_cert_identifier      = "rds-ca-2019"
+    master_username        = var.aurora_master_username
+    family                 = "aurora-mysql5.7"
+    engine                 = "aurora-mysql"
+    engine_version         = var.aurora_engine_version
+    cluster_instance_count = var.aurora_cluster_instance_count
+    instance_class         = var.aurora_instance_class
+    ca_cert_identifier     = "rds-ca-2019"
   }
   fargate_config = {
-    deploy_groups            = ["blue", "green"]
-    wordpress_min_capacity   = 1
-    wordpress_max_capacity   = 1
-    wordpress_container_port = 80
+    deploy_groups          = ["blue", "green"]
+    wordpress_min_capacity = var.wordpress_fargate_min_capacity
+    wordpress_max_capacity = var.wordpress_fargate_max_capacity
   }
 }
