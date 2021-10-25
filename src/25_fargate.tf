@@ -47,7 +47,7 @@ resource "aws_ecs_service" "wordpress" {
       for az in local.network_config.availability_zones :
       aws_subnet.private_subnet_fargate[az].id
     ]
-    security_groups  = [aws_security_group.wordpress_fargate.id]
+    security_groups  = [aws_security_group.wordpress.id]
     assign_public_ip = false
   }
 }

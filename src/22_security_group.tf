@@ -54,8 +54,8 @@ resource "aws_security_group_rule" "aurora_ingress_1" {
   security_group_id = aws_security_group.aurora.id
   type              = "ingress"
   protocol          = "tcp"
-  from_port         = 5432
-  to_port           = 5432
+  from_port         = 3306
+  to_port           = 3306
   cidr_blocks = [
     aws_subnet.public_subnet_common[each.value].cidr_block,
     aws_subnet.private_subnet_fargate[each.value].cidr_block
@@ -74,10 +74,10 @@ resource "aws_security_group_rule" "aurora_egress_1" {
 # ALB
 resource "aws_security_group" "alb" {
   vpc_id = aws_vpc.example.id
-  name   = "${local.service_config.prefix}-public-alb"
+  name   = "${local.service_config.prefix}-alb"
 
   tags = {
-    Name = "${local.service_config.prefix}-public-alb"
+    Name = "${local.service_config.prefix}-alb"
   }
 }
 
@@ -100,17 +100,17 @@ resource "aws_security_group_rule" "alb_egress_1" {
 }
 
 # WordPress
-resource "aws_security_group" "wordpress_fargate" {
+resource "aws_security_group" "wordpress" {
   vpc_id = aws_vpc.example.id
-  name   = "${local.service_config.prefix}-wordpress-fargate"
+  name   = "${local.service_config.prefix}-wordpress"
 
   tags = {
-    Name = "${local.service_config.prefix}-wordpress-fargate"
+    Name = "${local.service_config.prefix}-wordpress"
   }
 }
 
-resource "aws_security_group_rule" "wordpress_fargate_ingress_1" {
-  security_group_id        = aws_security_group.wordpress_fargate.id
+resource "aws_security_group_rule" "wordpress_ingress_1" {
+  security_group_id        = aws_security_group.wordpress.id
   type                     = "ingress"
   protocol                 = "tcp"
   from_port                = 80
@@ -118,8 +118,8 @@ resource "aws_security_group_rule" "wordpress_fargate_ingress_1" {
   source_security_group_id = aws_security_group.alb.id
 }
 
-resource "aws_security_group_rule" "wordpress_fargate_egress_1" {
-  security_group_id = aws_security_group.wordpress_fargate.id
+resource "aws_security_group_rule" "wordpress_egress_1" {
+  security_group_id = aws_security_group.wordpress.id
   type              = "egress"
   protocol          = "-1"
   from_port         = 0
