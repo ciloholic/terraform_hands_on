@@ -47,6 +47,12 @@ resource "aws_alb_target_group" "wordpress" {
   port        = 80
   target_type = "ip"
 
+  health_check {
+    path    = "/wp-admin/install.php"
+    port    = 80
+    matcher = "200,304"
+  }
+
   tags = {
     Name = "${local.service_config.prefix}-wordpress-${each.key}"
   }
