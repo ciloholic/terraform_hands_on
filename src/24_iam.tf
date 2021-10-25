@@ -48,3 +48,8 @@ resource "aws_iam_role_policy" "fargate_ssm_role_policy" {
   role   = aws_iam_role.fargate_execution_role.id
   policy = aws_iam_policy.fargate_ssm_policy.policy
 }
+
+resource "aws_iam_role_policy_attachment" "fargate_task_role_policy_attachment" {
+  role       = aws_iam_role.fargate_execution_role.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}

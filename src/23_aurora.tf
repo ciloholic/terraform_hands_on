@@ -46,6 +46,7 @@ resource "aws_rds_cluster" "example" {
   db_cluster_parameter_group_name = aws_rds_cluster_parameter_group.example.name
   storage_encrypted               = true
   skip_final_snapshot             = true
+  database_name                   = local.service_config.name
 
   lifecycle {
     ignore_changes = [master_password]
@@ -57,17 +58,16 @@ resource "aws_rds_cluster" "example" {
 }
 
 resource "aws_rds_cluster_instance" "example" {
-  count                        = local.aurora_config.cluster_instance_count
-  cluster_identifier           = aws_rds_cluster.example.id
-  identifier                   = "${local.service_config.prefix}-${count.index}"
-  engine                       = local.aurora_config.engine
-  engine_version               = local.aurora_config.engine_version
-  instance_class               = local.aurora_config.instance_class
-  db_parameter_group_name      = aws_db_parameter_group.example.name
-  db_subnet_group_name         = aws_db_subnet_group.example.name
-  ca_cert_identifier           = local.aurora_config.ca_cert_identifier
-  auto_minor_version_upgrade   = false
-  performance_insights_enabled = true
+  count                      = local.aurora_config.cluster_instance_count
+  cluster_identifier         = aws_rds_cluster.example.id
+  identifier                 = "${local.service_config.prefix}-${count.index}"
+  engine                     = local.aurora_config.engine
+  engine_version             = local.aurora_config.engine_version
+  instance_class             = local.aurora_config.instance_class
+  db_parameter_group_name    = aws_db_parameter_group.example.name
+  db_subnet_group_name       = aws_db_subnet_group.example.name
+  ca_cert_identifier         = local.aurora_config.ca_cert_identifier
+  auto_minor_version_upgrade = false
 
   tags = {
     Name = "${local.service_config.prefix}-aurora-cluster-instance"

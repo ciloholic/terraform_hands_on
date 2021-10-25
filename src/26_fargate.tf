@@ -84,6 +84,10 @@ resource "aws_ecs_task_definition" "wordpress" {
       {
         "name" : "WORDPRESS_TABLE_PREFIX",
         "value" : "wp_"
+      },
+      {
+        "name" : "WP_DEBUG",
+        "value" : "true"
       }
     ],
     "secrets" : [
@@ -95,7 +99,24 @@ resource "aws_ecs_task_definition" "wordpress" {
         "name" : "WORDPRESS_DB_PASSWORD",
         "valueFrom" : "/${local.service_config.name}/${local.service_config.env}/aurora-master-password"
       }
-    ]
+    ],
+    "healthCheck" : {
+      "command" : [
+        "CMD-SHELL",
+        "curl -f http://localhost//wp-admin/install.php || exit 1"
+      ],
+      "interval" : 15,
+      "retries" : 5,
+      "startPeriod" : 15
+    },
+    "logConfiguration" : {
+      "logDriver" : "awslogs",
+      "options" : {
+        "awslogs-region" : "ap-northeast-1",
+        "awslogs-group" : "${local.service_config.name}-${local.service_config.env}-wordpress",
+        "awslogs-stream-prefix" : "wordpress"
+      }
+    }
   }])
 
   lifecycle {

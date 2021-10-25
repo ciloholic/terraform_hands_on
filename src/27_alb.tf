@@ -34,7 +34,7 @@ resource "aws_alb_listener_rule" "alb" {
 
   condition {
     path_pattern {
-      values = ["*"]
+      values = ["/"]
     }
   }
 }
@@ -48,9 +48,11 @@ resource "aws_alb_target_group" "wordpress" {
   target_type = "ip"
 
   health_check {
-    path    = "/wp-admin/install.php"
-    port    = 80
-    matcher = "200,304"
+    path                = "/wp-admin/install.php"
+    port                = 80
+    interval            = 60
+    unhealthy_threshold = 5
+    matcher             = "200,304"
   }
 
   tags = {
