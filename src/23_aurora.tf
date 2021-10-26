@@ -1,3 +1,4 @@
+# DB クラスターのパラメータグループを設定する
 resource "aws_rds_cluster_parameter_group" "example" {
   name   = "${local.service_config.prefix}-cluster-parameter-group"
   family = local.aurora_config.family
@@ -21,11 +22,13 @@ resource "aws_rds_cluster_parameter_group" "example" {
   }
 }
 
+# パラメータグループを設定する
 resource "aws_db_parameter_group" "example" {
   name   = "${local.service_config.prefix}-db-parameter-group"
   family = local.aurora_config.family
 }
 
+# サブネットグループを設定する
 resource "aws_db_subnet_group" "example" {
   name = "${local.service_config.prefix}-db-subnet-group"
   subnet_ids = [
@@ -34,13 +37,14 @@ resource "aws_db_subnet_group" "example" {
   ]
 }
 
+# Aurora クラスターを設定する
 resource "aws_rds_cluster" "example" {
   cluster_identifier              = local.service_config.prefix
   master_username                 = local.aurora_config.master_username
   master_password                 = random_password.aurora_master_password.result
   engine                          = local.aurora_config.engine
   engine_version                  = local.aurora_config.engine_version
-  port                            = 5432
+  port                            = 3306
   vpc_security_group_ids          = [aws_security_group.aurora.id]
   db_subnet_group_name            = aws_db_subnet_group.example.name
   db_cluster_parameter_group_name = aws_rds_cluster_parameter_group.example.name
@@ -57,6 +61,7 @@ resource "aws_rds_cluster" "example" {
   }
 }
 
+# Aurora インスタンスを設定する
 resource "aws_rds_cluster_instance" "example" {
   count                      = local.aurora_config.cluster_instance_count
   cluster_identifier         = aws_rds_cluster.example.id

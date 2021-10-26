@@ -1,4 +1,4 @@
-# Fargate
+# Fargate 用
 data "aws_iam_policy_document" "fargate_execution_policy_document" {
   version = "2012-10-17"
   statement {

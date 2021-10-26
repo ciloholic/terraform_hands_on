@@ -1,4 +1,4 @@
-# VPC エンドポイント
+# VPC エンドポイント用
 resource "aws_security_group" "vpc_endpoint" {
   vpc_id = aws_vpc.example.id
   name   = "${local.service_config.prefix}-vpc-endpoint"
@@ -20,7 +20,7 @@ resource "aws_security_group_rule" "vpc_endpoint_ingress_1" {
   ]
 }
 
-# 踏み台サーバ
+# 踏み台サーバ用
 resource "aws_security_group" "step_server" {
   vpc_id = aws_vpc.example.id
   name   = "${local.service_config.prefix}-step-server"
@@ -39,7 +39,7 @@ resource "aws_security_group_rule" "step_server_egress_1" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-# Aurora
+# Aurora 用
 resource "aws_security_group" "aurora" {
   vpc_id = aws_vpc.example.id
   name   = "${local.service_config.prefix}-aurora"
@@ -71,7 +71,7 @@ resource "aws_security_group_rule" "aurora_egress_1" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-# ALB
+# ALB 用
 resource "aws_security_group" "alb" {
   vpc_id = aws_vpc.example.id
   name   = "${local.service_config.prefix}-alb"
@@ -99,7 +99,7 @@ resource "aws_security_group_rule" "alb_egress_1" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-# WordPress
+# WordPress 用
 resource "aws_security_group" "wordpress" {
   vpc_id = aws_vpc.example.id
   name   = "${local.service_config.prefix}-wordpress"

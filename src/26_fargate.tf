@@ -1,4 +1,4 @@
-# Fargate クラスタ
+# クラスター
 resource "aws_ecs_cluster" "example" {
   name = "${local.service_config.prefix}-fargate-cluster"
 
@@ -12,7 +12,7 @@ resource "aws_ecs_cluster" "example" {
   }
 }
 
-# WordPress サービス
+# サービス
 resource "aws_ecs_service" "wordpress" {
   depends_on                         = [aws_alb.alb]
   name                               = "${local.service_config.prefix}-wordpress"
@@ -32,10 +32,6 @@ resource "aws_ecs_service" "wordpress" {
     ]
   }
 
-  #   deployment_controller {
-  #     type = "CODE_DEPLOY"
-  #   }
-
   load_balancer {
     target_group_arn = aws_alb_target_group.wordpress["blue"].arn
     container_name   = "wordpress"
@@ -52,7 +48,7 @@ resource "aws_ecs_service" "wordpress" {
   }
 }
 
-# WordPress タスク定義
+# タスク
 resource "aws_ecs_task_definition" "wordpress" {
   family                   = "${local.service_config.prefix}-wordpress"
   network_mode             = "awsvpc"

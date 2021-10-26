@@ -1,15 +1,15 @@
-# 現在の AWS アカウント ID を取得
+# 現在の AWS アカウント ID を取得する
 data "aws_caller_identity" "current" {}
-# 現在のリージョン名を取得(ap-northeast-1)
+# 現在のリージョン名を取得する(ap-northeast-1)
 data "aws_region" "current" {}
 
 variable "aws_access_key" {
   type      = string
-  sensitive = true # Terraform の標準出力に非表示
+  sensitive = true # Terraform の標準出力に表示しないようにする
 }
 variable "aws_secret_key" {
   type      = string
-  sensitive = true # Terraform の標準出力に非表示
+  sensitive = true # Terraform の標準出力に表示しないようにする
 }
 variable "service_name" {
   type = string
@@ -36,7 +36,7 @@ variable "wordpress_fargate_max_capacity" {
   type = number
 }
 
-# Terraform 内で利用するローカル変数をまとめて定義
+# Terraform 内で利用するローカル変数をまとめて定義する
 locals {
   service_config = {
     name   = var.service_name

@@ -1,4 +1,5 @@
-resource "aws_vpc_endpoint" "private_link" {
+# ECR、CloudWatch logs、SSM の VPC エンドポイントを設定する
+resource "aws_vpc_endpoint" "example" {
   for_each = toset([
     "ecr.api",
     "ecr.dkr",
