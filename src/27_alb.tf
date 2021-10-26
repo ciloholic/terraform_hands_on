@@ -1,5 +1,5 @@
 # ALB
-resource "aws_alb" "alb" {
+resource "aws_alb" "example" {
   name            = "${local.service_config.prefix}-alb"
   security_groups = [aws_security_group.alb.id]
   subnets = [
@@ -14,7 +14,7 @@ resource "aws_alb" "alb" {
 }
 
 resource "aws_alb_listener" "alb" {
-  load_balancer_arn = aws_alb.alb.arn
+  load_balancer_arn = aws_alb.example.arn
   protocol          = "HTTP"
   port              = 80
 
@@ -24,7 +24,7 @@ resource "aws_alb_listener" "alb" {
   }
 }
 
-resource "aws_alb_listener_rule" "alb" {
+resource "aws_alb_listener_rule" "example" {
   listener_arn = aws_alb_listener.alb.arn
 
   action {

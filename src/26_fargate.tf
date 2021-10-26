@@ -14,7 +14,7 @@ resource "aws_ecs_cluster" "example" {
 
 # サービス
 resource "aws_ecs_service" "wordpress" {
-  depends_on                         = [aws_alb.alb]
+  depends_on                         = [aws_alb.example]
   name                               = "${local.service_config.prefix}-wordpress"
   cluster                            = aws_ecs_cluster.example.arn
   task_definition                    = aws_ecs_task_definition.wordpress.arn
