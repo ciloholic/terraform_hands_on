@@ -99,9 +99,9 @@ resource "aws_ecs_task_definition" "wordpress" {
     "healthCheck" : {
       "command" : [
         "CMD-SHELL",
-        "curl -f http://localhost//wp-admin/install.php || exit 1"
+        "curl -f http://localhost/index.php || exit 1"
       ],
-      "interval" : 15,
+      "interval" : 30,
       "retries" : 5,
       "startPeriod" : 15
     },
