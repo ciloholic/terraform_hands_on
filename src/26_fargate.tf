@@ -59,7 +59,7 @@ resource "aws_ecs_task_definition" "wordpress" {
   memory                   = 2048
   container_definitions = jsonencode([{
     "name" : "wordpress",
-    "image" : "wordpress:5.8-php8.0-fpm-alpine",
+    "image" : "wordpress:5.8-php8.0-apache",
     "essential" : true,
     "portMappings" : [
       {
@@ -99,10 +99,10 @@ resource "aws_ecs_task_definition" "wordpress" {
     "healthCheck" : {
       "command" : [
         "CMD-SHELL",
-        "curl -f http://localhost/index.php || exit 1"
+        "curl -f http://127.0.0.1/wp-admin/install.php || exit 1"
       ],
       "interval" : 30,
-      "retries" : 5,
+      "retries" : 3,
       "startPeriod" : 15
     },
     "logConfiguration" : {

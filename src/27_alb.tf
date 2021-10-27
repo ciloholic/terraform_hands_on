@@ -48,11 +48,10 @@ resource "aws_alb_target_group" "wordpress" {
   target_type = "ip"
 
   health_check {
-    path                = "/index.php"
-    port                = 80
-    interval            = 60
-    unhealthy_threshold = 5
-    matcher             = "200,304"
+    path     = "/wp-admin/install.php"
+    port     = 80
+    interval = 60
+    matcher  = "200,304"
   }
 
   tags = {
