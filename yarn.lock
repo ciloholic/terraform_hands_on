@@ -15,9 +15,9 @@
     "@azu/format-text" "^1.0.1"
 
 "@babel/parser@^7.7.5":
-  version "7.15.8"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.15.8.tgz#7bacdcbe71bdc3ff936d510c15dcea7cf0b99016"
-  integrity sha512-BRYa3wcQnjS/nqI8Ac94pYYpJfojHVvVXJ97+IDCImX4Jc8W8Xv1+47enbruk+q1etOpsQNwnfFcNGw+gtPGxA==
+  version "7.16.0"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.16.0.tgz#cf147d7ada0a3655e79bf4b08ee846f00a00a295"
+  integrity sha512-TEHWXf0xxpi9wKVyBCmRcSSDjbJ/cl6LUdlbYUHEaNQUJGhreJbZrXT6sR4+fZLxVUJqNRB4KyOvjuy/D9009A==
 
 "@textlint-rule/textlint-rule-no-unmatched-pair@^1.0.8":
   version "1.0.8"
@@ -1986,9 +1986,9 @@ textlint-rule-no-nfd@^1.0.2:
     unorm "^1.4.1"
 
 textlint-rule-preset-smarthr@^1.2.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-preset-smarthr/-/textlint-rule-preset-smarthr-1.9.0.tgz#e77bb5c9dce8510c21f6e8225275e2457db5782f"
-  integrity sha512-fO1K8/ZdNCw9NbLMUbZNRdH8BubOH83UbryPjea1saVqrlM2HKlZ8WUdtKOAMeumJsi/x8qkWVntTLaDMNVJ+g==
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-preset-smarthr/-/textlint-rule-preset-smarthr-1.10.0.tgz#bd5c40044583307ceffdee367f651847d2e48598"
+  integrity sha512-9WqwDM+4nqwI8aYiR5n1dFWcgxs24lz/NS4UE8j2ztv/HQzIY4q1RjNShFyvKJtRhRVnV1he4s0zNFohNtp/Gw==
   dependencies:
     "@textlint-rule/textlint-rule-no-unmatched-pair" "^1.0.8"
     "@textlint/module-interop" "^12.0.2"
