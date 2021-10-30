@@ -1,6 +1,7 @@
 resource "aws_ssm_parameter" "aurora_master_password" {
   name  = "/${local.service_config.name}/${local.service_config.env}/aurora-master-password"
   type  = "SecureString"
+  key_id = aws_kms_key.example.key_id
   value = aws_rds_cluster.example.master_password
 }
 
