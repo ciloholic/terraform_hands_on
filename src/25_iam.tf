@@ -1,4 +1,3 @@
-# Fargate 用
 data "aws_iam_policy_document" "fargate_execution_policy_document" {
   version = "2012-10-17"
   statement {
@@ -11,6 +10,7 @@ data "aws_iam_policy_document" "fargate_execution_policy_document" {
   }
 }
 
+# タスクに付与する権限を作成する
 resource "aws_iam_role" "fargate_execution_role" {
   name               = "${local.service_config.prefix}-fargate-execution-role"
   assume_role_policy = data.aws_iam_policy_document.fargate_execution_policy_document.json
@@ -49,6 +49,7 @@ resource "aws_iam_role_policy" "fargate_ssm_role_policy" {
   policy = aws_iam_policy.fargate_ssm_policy.policy
 }
 
+# タスクロールに他サービスへの権限を付与する
 resource "aws_iam_role_policy_attachment" "fargate_task_role_policy_attachment" {
   role       = aws_iam_role.fargate_execution_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
