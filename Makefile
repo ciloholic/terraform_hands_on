@@ -1,29 +1,29 @@
 init:
-	@cd src && \
+	@cd tf && \
 	terraform init
 
 plan:
-	@cd src && \
+	@cd tf && \
 	terraform plan
 
 apply:
-	@cd src && \
+	@cd tf && \
 	terraform apply
 
 destroy:
-	@cd src && \
+	@cd tf && \
 	terraform destroy
 
 val:
-	@cd src && \
+	@cd tf && \
 	terraform validate
 
 fmt:
-	@cd src && \
+	@cd tf && \
 	terraform fmt -recursive
 
 c:
-	@cd src && \
+	@cd tf && \
 	terraform console
 
 update:
