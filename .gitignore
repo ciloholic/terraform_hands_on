@@ -1,6 +1,8 @@
 !.keep
 .idea
 .terraform
+.vscode
+.venv
 terraform.tfvars
 terraform.tfstate*
 node_modules

@@ -1,0 +1,44 @@
+{
+    "cpu": "1024",
+    "memory": "2048",
+    "family": "tsp-dev-flask",
+    "networkMode": "awsvpc",
+    "placementConstraints": [],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "executionRoleArn": "arn:aws:iam::{{ must_env `AWS_ACCOUNT_ID` }}:role/tsp-dev-fargate-execution-role",
+    "taskRoleArn": "arn:aws:iam::{{ must_env `AWS_ACCOUNT_ID` }}:role/tsp-dev-fargate-execution-role",
+    "volumes": [],
+    "containerDefinitions": [
+        {
+            "name": "tsp-dev-flask",
+            "image": "{{ must_env `ECR_IMAGE` }}",
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 5000,
+                    "hostPort": 5000,
+                    "protocol": "tcp"
+                }
+            ],
+            "healthCheck": {
+                "command": [
+                    "CMD-SHELL",
+                    "curl -f http://localhost:5000/healthcheck || exit 1"
+                ],
+                "interval": 15,
+                "retries": 5,
+                "startPeriod": 15
+            },
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-region": "ap-northeast-1",
+                    "awslogs-group": "tsp-dev-flask",
+                    "awslogs-stream-prefix": "flask"
+                }
+            }
+        }
+    ]
+}

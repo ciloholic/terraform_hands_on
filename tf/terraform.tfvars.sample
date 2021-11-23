@@ -13,5 +13,5 @@ aurora_instance_class         = ""
 aurora_cluster_instance_count = 
 
 # fargate config
-wordpress_fargate_min_capacity   = 
-wordpress_fargate_max_capacity   = 
+fargate_min_capacity   = 
+fargate_max_capacity   = 

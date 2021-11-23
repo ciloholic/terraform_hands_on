@@ -29,10 +29,10 @@ variable "aurora_cluster_instance_count" {
 variable "aurora_instance_class" {
   type = string
 }
-variable "wordpress_fargate_min_capacity" {
+variable "fargate_min_capacity" {
   type = number
 }
-variable "wordpress_fargate_max_capacity" {
+variable "fargate_max_capacity" {
   type = number
 }
 
@@ -78,7 +78,7 @@ locals {
   }
   fargate_config = {
     deploy_groups          = ["blue", "green"]
-    wordpress_min_capacity = var.wordpress_fargate_min_capacity
-    wordpress_max_capacity = var.wordpress_fargate_max_capacity
+    wordpress_min_capacity = var.fargate_min_capacity
+    wordpress_max_capacity = var.fargate_max_capacity
   }
 }

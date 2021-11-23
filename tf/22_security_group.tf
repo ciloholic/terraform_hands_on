@@ -99,27 +99,27 @@ resource "aws_security_group_rule" "alb_egress_1" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-# WordPress 用
-resource "aws_security_group" "wordpress" {
+# flask 用
+resource "aws_security_group" "flask" {
   vpc_id = aws_vpc.example.id
-  name   = "${local.service_config.prefix}-wordpress"
+  name   = "${local.service_config.prefix}-flask"
 
   tags = {
-    Name = "${local.service_config.prefix}-wordpress"
+    Name = "${local.service_config.prefix}-flask"
   }
 }
 
-resource "aws_security_group_rule" "wordpress_ingress_1" {
-  security_group_id        = aws_security_group.wordpress.id
+resource "aws_security_group_rule" "flask_ingress_1" {
+  security_group_id        = aws_security_group.flask.id
   type                     = "ingress"
   protocol                 = "tcp"
-  from_port                = 80
-  to_port                  = 80
+  from_port                = 5000
+  to_port                  = 5000
   source_security_group_id = aws_security_group.alb.id
 }
 
-resource "aws_security_group_rule" "wordpress_egress_1" {
-  security_group_id = aws_security_group.wordpress.id
+resource "aws_security_group_rule" "flask_egress_1" {
+  security_group_id = aws_security_group.flask.id
   type              = "egress"
   protocol          = "-1"
   from_port         = 0

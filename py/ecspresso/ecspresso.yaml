@@ -1,0 +1,7 @@
+region: ap-northeast-1
+cluster: tsp-dev-fargate-cluster
+service: tsp-dev-flask
+task_definition: task-def.json
+timeout: 10m0s
+plugins: []
+appspec: null

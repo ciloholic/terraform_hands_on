@@ -13,11 +13,11 @@ resource "aws_ecs_cluster" "example" {
 }
 
 # サービス
-resource "aws_ecs_service" "wordpress" {
+resource "aws_ecs_service" "flask" {
   depends_on                         = [aws_alb.alb]
-  name                               = "${local.service_config.prefix}-wordpress"
+  name                               = "${local.service_config.prefix}-flask"
   cluster                            = aws_ecs_cluster.example.arn
-  task_definition                    = aws_ecs_task_definition.wordpress.arn
+  task_definition                    = aws_ecs_task_definition.flask.arn
   launch_type                        = "FARGATE"
   health_check_grace_period_seconds  = 60
   deployment_minimum_healthy_percent = 50
@@ -33,9 +33,9 @@ resource "aws_ecs_service" "wordpress" {
   }
 
   load_balancer {
-    target_group_arn = aws_alb_target_group.wordpress["blue"].arn
-    container_name   = "wordpress"
-    container_port   = 80
+    target_group_arn = aws_alb_target_group.flask["blue"].arn
+    container_name   = "${local.service_config.prefix}-flask"
+    container_port   = 5000
   }
 
   network_configuration {
@@ -43,14 +43,14 @@ resource "aws_ecs_service" "wordpress" {
       for az in local.network_config.availability_zones :
       aws_subnet.private_subnet_fargate[az].id
     ]
-    security_groups  = [aws_security_group.wordpress.id]
+    security_groups  = [aws_security_group.flask.id]
     assign_public_ip = false
   }
 }
 
 # タスク
-resource "aws_ecs_task_definition" "wordpress" {
-  family                   = "${local.service_config.prefix}-wordpress"
+resource "aws_ecs_task_definition" "flask" {
+  family                   = "${local.service_config.prefix}-flask"
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
   task_role_arn            = aws_iam_role.fargate_execution_role.arn
@@ -58,61 +58,16 @@ resource "aws_ecs_task_definition" "wordpress" {
   cpu                      = 1024
   memory                   = 2048
   container_definitions = jsonencode([{
-    "name" : "wordpress",
-    "image" : "wordpress:5.8-php8.0-apache",
+    "name" : "${local.service_config.prefix}-flask",
+    "image" : "flask:latest",
     "essential" : true,
     "portMappings" : [
       {
-        "containerPort" : 80,
-        "hostPort" : 80,
+        "containerPort" : 5000,
+        "hostPort" : 5000,
         "protocol" : "tcp"
       }
-    ],
-    "environment" : [
-      {
-        "name" : "WORDPRESS_DB_NAME",
-        "value" : "${local.service_config.name}"
-      },
-      {
-        "name" : "WORDPRESS_DB_USER",
-        "value" : "${local.aurora_config.master_username}"
-      },
-      {
-        "name" : "WORDPRESS_TABLE_PREFIX",
-        "value" : "wp_"
-      },
-      {
-        "name" : "WP_DEBUG",
-        "value" : "true"
-      }
-    ],
-    "secrets" : [
-      {
-        "name" : "WORDPRESS_DB_HOST",
-        "valueFrom" : "/${local.service_config.name}/${local.service_config.env}/database-host"
-      },
-      {
-        "name" : "WORDPRESS_DB_PASSWORD",
-        "valueFrom" : "/${local.service_config.name}/${local.service_config.env}/aurora-master-password"
-      }
-    ],
-    "healthCheck" : {
-      "command" : [
-        "CMD-SHELL",
-        "curl -f http://127.0.0.1/wp-admin/install.php || exit 1"
-      ],
-      "interval" : 30,
-      "retries" : 3,
-      "startPeriod" : 15
-    },
-    "logConfiguration" : {
-      "logDriver" : "awslogs",
-      "options" : {
-        "awslogs-region" : "ap-northeast-1",
-        "awslogs-group" : "${local.service_config.name}-${local.service_config.env}-wordpress",
-        "awslogs-stream-prefix" : "wordpress"
-      }
-    }
+    ]
   }])
 
   lifecycle {

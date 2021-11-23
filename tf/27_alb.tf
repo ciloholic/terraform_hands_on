@@ -21,7 +21,7 @@ resource "aws_alb_listener" "listener" {
 
   default_action {
     type             = "forward"
-    target_group_arn = aws_alb_target_group.wordpress["blue"].arn
+    target_group_arn = aws_alb_target_group.flask["blue"].arn
   }
 }
 
@@ -31,7 +31,7 @@ resource "aws_alb_listener_rule" "listener_rule" {
 
   action {
     type             = "forward"
-    target_group_arn = aws_alb_target_group.wordpress["blue"].arn
+    target_group_arn = aws_alb_target_group.flask["blue"].arn
   }
 
   condition {
@@ -41,22 +41,22 @@ resource "aws_alb_listener_rule" "listener_rule" {
   }
 }
 
-resource "aws_alb_target_group" "wordpress" {
+resource "aws_alb_target_group" "flask" {
   for_each    = toset(local.fargate_config.deploy_groups)
   vpc_id      = aws_vpc.example.id
-  name        = "${local.service_config.prefix}-wordpress-${each.key}"
+  name        = "${local.service_config.prefix}-flask-${each.key}"
   protocol    = "HTTP"
-  port        = 80
+  port        = 5000
   target_type = "ip"
 
   health_check {
-    path     = "/wp-admin/install.php"
-    port     = 80
+    path     = "/healthcheck"
+    port     = 5000
     interval = 60
     matcher  = "200,304"
   }
 
   tags = {
-    Name = "${local.service_config.prefix}-wordpress-${each.key}"
+    Name = "${local.service_config.prefix}-flask-${each.key}"
   }
 }
