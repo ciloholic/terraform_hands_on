@@ -77,8 +77,8 @@ locals {
     ca_cert_identifier     = "rds-ca-2019"
   }
   fargate_config = {
-    deploy_groups          = ["blue", "green"]
-    wordpress_min_capacity = var.fargate_min_capacity
-    wordpress_max_capacity = var.fargate_max_capacity
+    deploy_groups = ["blue", "green"]
+    min_capacity  = var.fargate_min_capacity
+    max_capacity  = var.fargate_max_capacity
   }
 }
