@@ -19,7 +19,7 @@ resource "aws_ecs_service" "flask" {
   cluster                            = aws_ecs_cluster.example.arn
   task_definition                    = aws_ecs_task_definition.flask.arn
   launch_type                        = "FARGATE"
-  health_check_grace_period_seconds  = 60
+  health_check_grace_period_seconds  = 15
   deployment_minimum_healthy_percent = 50
   deployment_maximum_percent         = 200
 
@@ -59,7 +59,7 @@ resource "aws_ecs_task_definition" "flask" {
   memory                   = 2048
   container_definitions = jsonencode([{
     "name" : "${local.service_config.prefix}-flask",
-    "image" : "flask:latest",
+    "image" : "${aws_ecr_repository.flask.repository_url}:latest",
     "essential" : true,
     "portMappings" : [
       {

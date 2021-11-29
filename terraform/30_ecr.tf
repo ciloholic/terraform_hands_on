@@ -1,3 +1,4 @@
+# Flask の リポジトリを作成する
 resource "aws_ecr_repository" "flask" {
   name                 = "${local.service_config.prefix}-flask"
   image_tag_mutability = "MUTABLE"
