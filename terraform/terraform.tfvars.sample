@@ -15,3 +15,6 @@ aurora_cluster_instance_count =
 # fargate config
 fargate_min_capacity   = 
 fargate_max_capacity   = 
+
+# codedeploy config
+codedeploy_termination_wait_time_in_minutes = 
