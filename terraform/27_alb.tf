@@ -1,5 +1,7 @@
 # ALB
 resource "aws_alb" "alb" {
+  # ALB を作成前にインターネットゲートウェイが必要になる為、明示的に依存関係を設定する
+  depends_on = [aws_internet_gateway.igw]
   name            = "${local.service_config.prefix}-alb"
   security_groups = [aws_security_group.alb.id]
   subnets = [
