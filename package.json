@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "textlint docs README.md"
+    "lint": "textlint --fix docs python ecspresso README.md"
   },
   "dependencies": {
     "textlint": "^11.9.1",
