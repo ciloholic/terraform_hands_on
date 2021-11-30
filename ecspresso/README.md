@@ -12,8 +12,8 @@ $ export ECR_IMAGE=$AWS_ACCOUNT_ID.dkr.ecr.ap-northeast-1.amazonaws.com/tsp-dev-
 ```
 
 ```
-$ ecspresso status --config ecspresso.yaml
-$ ecspresso --config ecspresso.yaml verify
-$ ecspresso deploy --config ecspresso.yaml --tasks=1
-$ ecspresso deploy --config ecspresso.yaml --tasks=-1 --skip-task-definition --dry-run
+$ ecspresso status
+$ ecspresso verify
+$ ecspresso deploy --tasks=1
+$ ecspresso deploy --tasks=-1 --skip-task-definition --dry-run
 ```
