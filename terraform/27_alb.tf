@@ -21,6 +21,10 @@ resource "aws_alb_listener" "listener" {
   protocol          = "HTTP"
   port              = 80
 
+  lifecycle {
+    ignore_changes = [default_action] # Blue / Green デプロイで target_group が切り替わる為、ignore_changes に指定する
+  }
+
   default_action {
     type             = "forward"
     target_group_arn = aws_alb_target_group.flask["blue"].arn
@@ -30,6 +34,10 @@ resource "aws_alb_listener" "listener" {
 # リスナールール
 resource "aws_alb_listener_rule" "listener_rule" {
   listener_arn = aws_alb_listener.listener.arn
+
+  lifecycle {
+    ignore_changes = [action] # Blue / Green デプロイで target_group が切り替わる為、ignore_changes に指定する
+  }
 
   action {
     type             = "forward"
