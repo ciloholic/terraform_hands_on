@@ -35,6 +35,9 @@ variable "fargate_min_capacity" {
 variable "fargate_max_capacity" {
   type = number
 }
+variable "codedeploy_termination_wait_time_in_minutes" {
+  type = number
+}
 
 # Terraform 内で利用するローカル変数をまとめて定義する
 locals {
@@ -80,5 +83,8 @@ locals {
     deploy_groups = ["blue", "green"]
     min_capacity  = var.fargate_min_capacity
     max_capacity  = var.fargate_max_capacity
+  }
+  codedeploy_config = {
+    termination_wait_time_in_minutes = var.codedeploy_termination_wait_time_in_minutes
   }
 }

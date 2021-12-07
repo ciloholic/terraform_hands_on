@@ -32,6 +32,10 @@ resource "aws_ecs_service" "flask" {
     ]
   }
 
+  deployment_controller {
+    type = "CODE_DEPLOY"
+  }
+
   load_balancer {
     target_group_arn = aws_alb_target_group.flask["blue"].arn
     container_name   = "${local.service_config.prefix}-flask"
